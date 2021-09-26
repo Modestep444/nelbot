@@ -579,7 +579,7 @@ if (budy.includes("https://m.facebook.com/")){
 
 /******ENTRADA FIN DE FUNCIONES******/
 			function addMetadata(packname, author) {	
-				if (!packname) packname = 'BOT'; if (!author) author = 'Nel';	
+				if (!packname) packname = 'BOT'; if (!author) author = 'NEL';	
 				author = author.replace(/[^a-zA-Z0-9]/g, '');	
 				let name = `${author}_${packname}`
 				if (fs.existsSync(`./src/stickers/${name}.exif`)) return `./src/stickers/${name}.exif`
@@ -847,7 +847,7 @@ break
 						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions('╔══✪〘 *TODOS* 〙✪══\n╠➥'+teks+'╚═〘 _*by shanduy*_ 〙', members_id, true)
+					mentions('╔══✪〘 *TODOS* 〙✪══\n╠➥'+teks+'╚═〘 _*by Nelson*_ 〙', members_id, true)
 					break
                                 case 'send':
 					var pc = body.slice(6)
@@ -878,7 +878,7 @@ break
 						reply('')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `*「 _*by shanduy*_ 」*\n\n${body.slice(4)}`)
+							sendMess(_.jid, `*「 _*by Nelson*_ 」*\n\n${body.slice(4)}`)
 						}
 						reply('Transmisión exitosa')
 					}
@@ -1355,7 +1355,7 @@ break
 						fs.unlinkSync(media)
 						if (err) return reply('❌ No se pudo convertir el sticker en imágenes')
 						buffer = fs.readFileSync(ran)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: '*⌈ Imagen convertida ✅ ⌉*\n\n_*by shanduy*_'})
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: '*⌈ Imagen convertida ✅ ⌉*\n\n_*by Nelson*_'})
 						fs.unlinkSync(ran)
 					})
 					break
@@ -1387,7 +1387,7 @@ break
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=hamilton50`)
                 if (anu.error) return reply(anu.error)
-                infomp3 = `*⌜Cancion Encontrada ✅⌟*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*\n\n_*Servicio proveido por shanduy*_`
+                infomp3 = `*⌜Cancion Encontrada ✅⌟*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*\n\n_*Servicio proveido por Nelson*_`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
@@ -1401,7 +1401,7 @@ break
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=shanduy50`)
                 if (anu.error) return reply(anu.error)
-                infomp3 = `*⌜Cancion Encontrada ✅⌟*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*\n\n_*Servicio proveido por shanduy*_`
+                infomp3 = `*⌜Cancion Encontrada ✅⌟*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*\n\n_*Servicio proveido por Nelson*_`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
@@ -1427,7 +1427,7 @@ break
 				
 //REGISTRO				
 
-case 'daftar':
+case 'soy':
 client.updatePresence(from, Presence.composing)
 if (isUser) return reply('Ya estas registrado 🧐')
 if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}soy Nombre\n\nEjemplo: ${prefix}soy nelson`)

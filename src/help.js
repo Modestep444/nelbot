@@ -1,7 +1,7 @@
 const help = (prefix) => {
 	return `
 
-⌜ *×͜× NELBOT𝙱𝙾𝚈* ⌟  
+⌜ *×͜× NELBOT ×͜×* ⌟  
 
 ◉ *INFORMACION*
    ○ Comando: ⌜ ${prefix} ⌟
